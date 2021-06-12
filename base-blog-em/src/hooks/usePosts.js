@@ -7,5 +7,5 @@ async function fetchPosts() {
   return response.json();
 }
 export default function usePosts() {
-  return useQuery('posts', fetchPosts);
+  return useQuery('posts', fetchPosts, { cacheTime: 5000 });
 }
