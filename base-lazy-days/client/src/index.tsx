@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { App } from './components/app/App';
+import { ReactQuery } from './react-query/queryClient';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <ReactQuery>
+      <Router>
+        <App />
+      </Router>
+    </ReactQuery>
   </React.StrictMode>,
   document.getElementById('root'),
 );

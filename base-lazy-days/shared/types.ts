@@ -2,6 +2,9 @@ export interface Id {
   id: number;
 }
 
+export type Props = {
+  children: React.ReactNode;
+};
 export interface NewUser {
   email: string;
   name?: string;
