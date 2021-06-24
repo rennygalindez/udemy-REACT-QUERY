@@ -1,3 +1,19 @@
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools/';
+
+import { Props } from '../../../shared/types';
+
+const queryClient: QueryClient = new QueryClient();
+
+export const ReactQuery = ({ children }: Props) => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      {children}
+      <ReactQueryDevtools />
+    </QueryClientProvider>
+  );
+};
+
 // import { createStandaloneToast } from '@chakra-ui/react';
 // import { theme } from '../theme';
 
@@ -18,4 +34,3 @@
 // }
 
 // to satisfy typescript until this file has uncommented contents
-export {};
